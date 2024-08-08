@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ilk rakamı giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgi-rM-Fho">
+                                <rect key="frame" x="51" y="117" width="309" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ikinci rakamı giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="67u-NE-FE9">
+                                <rect key="frame" x="51" y="192" width="309" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvz-jg-Okl">
+                                <rect key="frame" x="70" y="299" width="35" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <connections>
+                                    <action selector="toplamaTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ty2-lr-Pkk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-Iy-2O4">
+                                <rect key="frame" x="148" y="300" width="32" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                <connections>
+                                    <action selector="cikarmaTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m0h-eO-85e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlv-pj-6t8">
+                                <rect key="frame" x="230" y="299" width="32" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="*"/>
+                                <connections>
+                                    <action selector="carpmaTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qez-nJ-yDh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXk-Lb-Q9W">
+                                <rect key="frame" x="300" y="299" width="29" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="/"/>
+                                <connections>
+                                    <action selector="bolmeTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmv-B6-Fr3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sonuç:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBS-Cw-6dW">
+                                <rect key="frame" x="148" y="427" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PXk-Lb-Q9W" firstAttribute="leading" secondItem="xlv-pj-6t8" secondAttribute="trailing" constant="38" id="0zE-9d-qdd"/>
+                            <constraint firstItem="Bgi-rM-Fho" firstAttribute="leading" secondItem="67u-NE-FE9" secondAttribute="leading" id="1B6-wA-Rfl"/>
+                            <constraint firstItem="xlv-pj-6t8" firstAttribute="baseline" secondItem="PXk-Lb-Q9W" secondAttribute="baseline" id="EvC-HP-wcc"/>
+                            <constraint firstItem="Bvz-jg-Okl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Hhf-2a-VYN"/>
+                            <constraint firstItem="Bvz-jg-Okl" firstAttribute="top" secondItem="67u-NE-FE9" secondAttribute="bottom" constant="73" id="Opf-LS-dqV"/>
+                            <constraint firstItem="Bgi-rM-Fho" firstAttribute="trailing" secondItem="67u-NE-FE9" secondAttribute="trailing" id="Rxs-Lj-DwW"/>
+                            <constraint firstItem="Bgi-rM-Fho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="YBI-8o-Crs"/>
+                            <constraint firstItem="mA2-Iy-2O4" firstAttribute="top" secondItem="67u-NE-FE9" secondAttribute="bottom" constant="74" id="ZeC-lb-Ocr"/>
+                            <constraint firstItem="mA2-Iy-2O4" firstAttribute="leading" secondItem="JBS-Cw-6dW" secondAttribute="leading" id="dux-xU-c8I"/>
+                            <constraint firstItem="JBS-Cw-6dW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="gZJ-NS-Txp"/>
+                            <constraint firstItem="xlv-pj-6t8" firstAttribute="leading" secondItem="mA2-Iy-2O4" secondAttribute="trailing" constant="50" id="hnt-tK-gvx"/>
+                            <constraint firstItem="Bgi-rM-Fho" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="nJ8-e8-bg4"/>
+                            <constraint firstItem="Bvz-jg-Okl" firstAttribute="baseline" secondItem="xlv-pj-6t8" secondAttribute="baseline" id="oa1-sc-duS"/>
+                            <constraint firstItem="67u-NE-FE9" firstAttribute="top" secondItem="Bgi-rM-Fho" secondAttribute="bottom" constant="41" id="pte-eW-Zpc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bgi-rM-Fho" secondAttribute="trailing" constant="33" id="vLq-CB-yGc"/>
+                            <constraint firstItem="JBS-Cw-6dW" firstAttribute="top" secondItem="mA2-Iy-2O4" secondAttribute="bottom" constant="92" id="vWS-Eo-SMf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ikinciText" destination="67u-NE-FE9" id="r6S-9r-SEZ"/>
+                        <outlet property="ilkText" destination="Bgi-rM-Fho" id="aDv-wZ-YdG"/>
+                        <outlet property="sonuc" destination="JBS-Cw-6dW" id="vPR-ac-Mav"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.877862595419849" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
