@@ -49,7 +49,7 @@ class ViewController: UIViewController {
                 sonuc.text=String(sonucim)
             }
             else{sonuc.text="ikinci sayiya bir rakam giriniz"}
-        }else{ sonuc.text="birinci sayiya bir rakam giriniz"}
+        }else{ sonuc.text="birinci sayi bir rakam değil. rakam gir"}
     }
     
     
